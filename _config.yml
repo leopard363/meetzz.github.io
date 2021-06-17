@@ -1,22 +1,18 @@
 # Site settings
-# 博客标题
 title: 墙纸的博客
-# SEO 标题
 SEOTitle: 墙纸的博客 | lxbb Blog
-# 头部背景图
 header-img: img/post-bg-desk.jpg
-# 邮箱
 email: 3195572062@qq.com
 description: "Front End Engineer"
-keyword: "lxbb, lxbb Blog, 墙纸的博客, qiangzhi, 墙纸, web, react, vue"
-url: "http://AiLi0617.github.io"          # your host, for absolute URL
+keyword: "lxbb, lxbb Blog, 墙纸的博客, liangshichao, 墙纸, web, react, vue"
+url: "http://290352095.github.io"          # your host, for absolute URL
 baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
-github_repo: "https://github.com/AiLi0617/AiLi0617.github.io.git" # you code repository
+github_repo: "https://github.com/290352095/290352095.github.io.git" # you code repository
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
 sidebar-about-description: "Goals determine what you going to be!"
-sidebar-avatar: /img/about-BY-gentle1.png      # use absolute URL, seeing it's used in both `/` and `/about/`
+sidebar-avatar: /img/about-BY-gentle.png      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
 
@@ -24,7 +20,7 @@ sidebar-avatar: /img/about-BY-gentle1.png      # use absolute URL, seeing it's u
 RSS: false
 # weibo_username:     qiubaiying
 # zhihu_username:     qiubaiying
-# github_username:    AiLi0617
+# github_username:    qiubaiying
 # facebook_username:  baiying.qiu.7
 # jianshu_username:   e71990ada2fd
 #twitter_username:   qiubaiying
@@ -35,7 +31,6 @@ RSS: false
 # Build settings
 # from 2016, 'pygments' is unsupported on GitHub Pages. Use 'rouge' for highlighting instead.
 permalink: pretty
-# 一页你准备放几篇文章
 paginate: 10
 exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
 anchorjs: true                          # if you want to customize anchor. check out line:181 of `post.html`
@@ -69,9 +64,9 @@ gitalk:
   enable: true    #是否开启Gitalk评论
   clientID: ed0d5d08f8c6a907095c                            #生成的clientID
   clientSecret: 7f420f618634dcf7d9d30470097200dbf61fa8cc    #生成的clientSecret
-  repo: aiLi0617.github.io    #仓库名称
-  owner: aiLi0617    #github用户名
-  admin: aiLi0617
+  repo: 290352095.github.io    #仓库名称
+  owner: 290352095    #github用户名
+  admin: 290352095
   distractionFreeMode: true #是否启用类似FB的阴影遮罩
 
 
@@ -83,7 +78,7 @@ gitalk:
 
 # Google Analytics
 ga_track_id: 'UA-90855596-1'            # Format: UA-xxxxxx-xx
-ga_domain: auto               # 默认的是 auto, 这里我是自定义了的域名，你如果没有自己的域名，需要改成auto
+ga_domain: lsc626.cn               # 默认的是 auto, 这里我是自定义了的域名，你如果没有自己的域名，需要改成auto
 
 
 
