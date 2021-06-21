@@ -5,9 +5,9 @@ header-img: img/post-bg-desk.jpg
 email: 3195572062@qq.com
 description: "Front End Engineer"
 keyword: "lxbb, lxbb Blog, 墙纸的博客, liangshichao, 墙纸, web, react, vue"
-url: "http://290352095.github.io"          # your host, for absolute URL
+url: "http://aili0617.github.io"          # your host, for absolute URL
 baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
-github_repo: "https://github.com/290352095/290352095.github.io.git" # you code repository
+github_repo: "https://github.com/aili0617/aili0617.github.io.git" # you code repository
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
