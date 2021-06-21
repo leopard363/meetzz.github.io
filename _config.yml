@@ -62,8 +62,8 @@ disqus_username: aiLi0617
 # Gitalk
 gitalk:
   enable: true    #是否开启Gitalk评论
-  clientID: ed0d5d08f8c6a907095c                            #生成的clientID
-  clientSecret: 7f420f618634dcf7d9d30470097200dbf61fa8cc    #生成的clientSecret
+  clientID: 459b02a6ce26425079c6                            #生成的clientID
+  clientSecret: ac08ea4a1ada86e8f25c8d629c61aaef613c3014    #生成的clientSecret
   repo: aiLi0617.github.io    #仓库名称
   owner: aiLi0617    #github用户名
   admin: aiLi0617
