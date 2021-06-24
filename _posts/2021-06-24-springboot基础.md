@@ -27,7 +27,8 @@ ja一、SpringBoot快速入门
 
  看看idea能怎么优雅的创建一个springboot项目
 
-（1）创建一个项目选择spring initializr![1624446123415](img\springboot\1624446123415.png)
+（1）创建一个项目选择spring initializr
+![1624446123415](https://aili0617.github.io\img\springboot\1624446123415.png)
 
 （2）工程名spring-boot-test
 
