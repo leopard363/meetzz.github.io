@@ -279,6 +279,7 @@ if(配置里有){
 //   引入一个实现了ImportSelector接口的类，返回全类型数组，数组的类都可以引入
 @Import(UserSelector.class)
 public class UserSelector implements ImportSelector {
+    
 	@Override
 	public String[] selectImports(AnnotationMetadata importingClassMetadata){
 		return new String[]{"cn.itnanls.User"};
@@ -326,7 +327,7 @@ public class UserSelector implements ImportSelector {
 
 当所有组件都有默认的配置，都有你知我知的约定，那他具体怎么和spring整合，我们就明白了。 举个例子，比如整合thymleaf，默认他们试图解析器前缀是“classpath:/templates/”,后缀是“.html” 那么在整合时，我们即使什么也不配，我也知道。
 
-```
+```xml
 <dependency>
 	<groupId>org.springframework.boot</groupId>
 	<artifactId>spring-boot-starter-thymeleaf</artifactId>
@@ -378,7 +379,7 @@ YML文件的扩展名可以使用.yml或者.yaml。
 
 - 示例代码：
 
-```
+```yml
 person:
 	name: haohao
 	age: 31
@@ -434,9 +435,7 @@ city:  [beijing,tianjin,shanghai,chongqing]
 
 ### 2）常用配置
 
- 
-
-```yml
+```properties
 # EMBEDDED SERVER CONFIGURATION (ServerProperties) 
 server.port=8080 # Server HTTP port.
 server.servlet.context-path= demo # Context path of the application.
@@ -459,14 +458,14 @@ spring.datasource.username= # Login username of the database.
 
 application.properties文件
 
-```
+```properties
 server.port=8888
 server.servlet.context-path=demo
 ```
 
 application.yml文件
 
-```
+```properties
 server:
 	port: 8888
 	servlet:
@@ -545,6 +544,7 @@ person:
 @Controller
 @ConfigurationProperties(prefix = "person") 
 public class QuickStartController {
+    
 	private String name; private Integer age;
 
 	@RequestMapping("/quick")
@@ -645,7 +645,7 @@ pom.xml，xml配置如下（只摘抄了部分重点配置）：
 
 按住Ctrl点击pom.xml中的spring-boot-starter-dependencies，跳转到了spring-boot-starter- dependencies的pom.xml，xml配置如下（只摘抄了部分重点配置）：
 
-```
+```xml
 <properties>
 	<activemq.version>5.15.12</activemq.version>
 	<commons-codec.version>1.14</commons-codec.version>
@@ -787,7 +787,7 @@ springboot帮助我们整合了市场上绝大多数多的常用组件，并且�
 
 默认回去static中中找index.html
 
-```
+```properties
 classpath:/static/index.html
 classpath:/public/index.html
 ```
@@ -867,8 +867,7 @@ public static void main(String[] args) {
 ```java
 SpringApplicationBannerPrinter类中：
 static final String BANNER_LOCATION_PROPERTY = "spring.banner.location";
-static final String BANNER_IMAGE_LOCATION_PROPERTY =
-"spring.banner.image.location";
+static final String BANNER_IMAGE_LOCATION_PROPERTY = "spring.banner.image.location";
 static final String DEFAULT_BANNER_LOCATION = "banner.txt";
 ```
 
@@ -897,8 +896,6 @@ static final String DEFAULT_BANNER_LOCATION = "banner.txt";
 
 所以呢，要配置为jetty要去掉默认tomcat配置
 
- 
-
 ```xml
 <dependency>
 	<groupId>org.springframework.boot</groupId>
@@ -914,7 +911,7 @@ static final String DEFAULT_BANNER_LOCATION = "banner.txt";
 
 并且加上jetty启动
 
-```
+```xml
 <dependency>
 	<groupId>org.springframework.boot</groupId>
 	<artifactId>spring-boot-starter-jetty</artifactId>
@@ -925,7 +922,7 @@ static final String DEFAULT_BANNER_LOCATION = "banner.txt";
 
 默认，就用默认
 
-```
+```properties
 classpath:/META-INF/resources/
 classpath:/resources/
 classpath:/static/
@@ -936,7 +933,7 @@ classpath:/public/
 
 第一种：在配置文件中进行配置
 
-```yml
+```properties
 #静态资源访问路径
 spring.mvc.static-path-pattern=/img/**
 #静态资源映射路径，注意会覆盖
@@ -967,7 +964,7 @@ WebMvcConfigurer配置类其实是 Spring 内部的一种配置方式，采用 J
 
 **常用的方法**：
 
-```
+```java
 /**
 * @author zn
 * @date 2021/3/3
@@ -1086,7 +1083,7 @@ public class ApplicationConfiguration implements WebMvcConfigurer {
 <packaging>war</packaging>
 ```
 
-```
+```xml
 <dependency>
 	<groupId>org.springframework.boot</groupId>
 	<artifactId>spring-boot-starter-web</artifactId>
@@ -1111,8 +1108,6 @@ public class ApplicationConfiguration implements WebMvcConfigurer {
 
  
 
- 
-
 ```java
 /**
  * @author AiLi
@@ -1120,8 +1115,10 @@ public class ApplicationConfiguration implements WebMvcConfigurer {
  */   
 @Component   
 public class ServletInitializer extends SpringBootServletInitializer {
+    
 	@Override   
 	protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {
+        
 		return  builder.sources(MySpringBootApplication.class);   
 	}   
 }   
@@ -1137,10 +1134,12 @@ SpringBootServletInitializer 可以使用外部的Servlet容器，使用步骤�
 - 2.嵌入式Tomcat依赖scope指定provided。
 - 3.编写SpringBootServletInitializer类子类,并重写configure方法。
 
-```
+```java
 public class ServletInitializer extends SpringBootServletInitializer {
+
 	@Override
 	protected SpringApplicationBuilder configure(SpringApplicationBuilder application) { 
+	
 		return  application.sources(SpringBoot04WebJspApplication.class);
 	}
 }
@@ -1201,7 +1200,7 @@ public class CommandRunnerTwo implements CommandLineRunner {
 >  测试
 
 另一个和这个接口用法一样，只是参数不同，有兴趣的同学可以研究一下。
-![1624458323328](http://aili0617.github.io\img\springboot\1624458323328.png)
+![1624458323328](https://aili0617.github.io\img\springboot\1624458323328.png)
 
 ## 10、配置文件的读取顺序                                                
 
@@ -1241,8 +1240,9 @@ public class CommandRunnerTwo implements CommandLineRunner {
   * override those defined in lower locations).
   */
 @Deprecated
-public class ConfigFileApplicationListener implements EnvironmentPostProcessor, SmartApplicationListener, Ordered {
+public class ConfigFileApplicationListener implements EnvironmentPostProcessor, SmartApplicationListener, Ordered{
 
+}
 ```
 
 ## 11、SpringBoot Profile多环境配置
@@ -1265,7 +1265,7 @@ application-test.yml
 spring:
 	profiles:
 		active: dev #指定使用哪个环境 
----
+	---
 server:
 	port: 8082
 spring:
@@ -1309,8 +1309,9 @@ spring:
  */
 @WebServlet(urlPatterns = "/user")
 public class UserServlet extends HttpServlet {
+    
 	@Override
-	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException{
 		System.out.println("创建了servlet");
 	}
 }
@@ -1323,14 +1324,14 @@ public class SpringbootStudyApplication { public static void main(String[] args)
 	SpringApplication.run(SpringbootStudyApplication.class,  args);
 }
                                          
-/**                                         /**
+/** 
  * @author itnanls
  * @date 2021/3/9
  */
 @WebFilter("/*")
 public class UserFilter implements Filter {
 	@Override
-	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, 			ServletException {
+	public void doFilter(ServletRequest request,ServletResponse response,FilterChain chain) throws IOException,ServletException {
 		System.out.println("来了过滤器！");
 		doFilter(request,response,chain);
 	}
@@ -1370,10 +1371,10 @@ public class SpringbootStudyApplication { public static void main(String[] args)
   * @author itnanls 3 * @date 2021/3/9
   */
 @Configuration
-public class ServletConfiguration { 7
+public class ServletConfiguration {
 	@Bean
 	public ServletRegistrationBean<UserServlet> servletRegistrationBean(){
-		return new ServletRegistrationBean<>(new UserServlet(),"/user"); 11 
+		return new ServletRegistrationBean<>(new UserServlet(),"/user");
 	}
 
 	@Bean
@@ -1381,13 +1382,14 @@ public class ServletConfiguration { 7
 		FilterRegistrationBean<UserFilter> register = new FilterRegistrationBean<>();
 		register.setFilter(new UserFilter());
 		register.setUrlPatterns(Arrays.asList("/admin/*","/user/*"));
-		return register; 19 
+		return register;
 	}
 
 	@Bean
 	public ServletListenerRegistrationBean<UserListener> servletListenerRegistrationBean(){
-		return new ServletListenerRegistrationBean<>(new UserListener()); 24 }
+		return new ServletListenerRegistrationBean<>(new UserListener());
 	}
+}
 ```
 
 ## 13、观察者设计模式                                                       
@@ -1400,6 +1402,7 @@ public class ServletConfiguration { 7
  *
  */
 public class MyApplicationEvent extends ApplicationEvent {
+    
 	private static final long serialVersionUID = 1L;
 	public MyApplicationEvent(Object source) {
 		super(source);	
@@ -1412,6 +1415,7 @@ public class MyApplicationEvent extends ApplicationEvent {
  */
 @Component
 public class MyApplicationListener implements ApplicationListener<MyApplicationEvent>  {
+    
 	public void onApplicationEvent(MyApplicationEvent event) {
 		System.out.println("接收到事件："+event.getClass());
 	}
@@ -2425,7 +2429,7 @@ public class UserRealm extends AuthorizingRealm {
 ```
 
 #### （5）登录方法
- 
+
 
 ```java
 @ResponseBody
@@ -2479,7 +2483,7 @@ shiro提供和多个默认的过滤器，我们可以用这些过滤器来配置
 | user              | UserFilter                     | 需要已登录或“记住我”的用户才能访 问                          |
 
 
- 
+
 
 #### （8）shiro常用注解
 
@@ -2791,7 +2795,7 @@ public String getMyRoles(String username) {
 ###### 值得注意的是，@ PreAuthorize表达式可以替换为@PostAuthorize表达式。
 
 
- 
+
 
 **让我们重写getMyRoles**：
 
