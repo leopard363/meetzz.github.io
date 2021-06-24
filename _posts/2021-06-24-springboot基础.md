@@ -19,7 +19,7 @@ tags:
 - Swagger
 ---
 
-ja一、SpringBoot快速入门
+#一、SpringBoot快速入门
 
 ## 1、创建SpringBoot项目
 
@@ -1200,7 +1200,8 @@ public class CommandRunnerTwo implements CommandLineRunner {
 
 >  测试
 
-另一个和这个接口用法一样，只是参数不同，有兴趣的同学可以研究一下。![1624458323328](img\springboot\1624458323328.png)
+另一个和这个接口用法一样，只是参数不同，有兴趣的同学可以研究一下。
+![1624458323328](http://aili0617.github.io\img\springboot\1624458323328.png)
 
 ## 10、配置文件的读取顺序                                                
 
