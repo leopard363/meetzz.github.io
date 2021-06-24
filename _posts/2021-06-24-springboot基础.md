@@ -31,13 +31,13 @@ ja一、SpringBoot快速入门
 
 （2）工程名spring-boot-test
 
-![1624446265945](img\springboot\1624446265945.png)
+![1624446265945](..\img\springboot\1624446265945.png)
 
 （3）勾选需要的组件
 
-![1624446330491](img\springboot\1624446330491.png)
+![1624446330491](..\img\springboot\1624446330491.png)
 
-![1624446396886](img\springboot\1624446396886.png)
+![1624446396886](..\img\springboot\1624446396886.png)
 
 > **写一个controller**
 
@@ -54,11 +54,11 @@ public class UserController{
 
 > **运行引导类的main方法**
 
-![1624450883807](img\springboot\1624450883807.png)
+![1624450883807](..\img\springboot\1624450883807.png)
 
 结果为OK！
 
-![1624450958467](img\springboot\1624450958467.png)
+![1624450958467](..\img\springboot\1624450958467.png)
 
 其他的都一样是不是很快是不是很爽！
 
@@ -66,7 +66,7 @@ public class UserController{
 
 1、springboot工程本质就是个maven工程，他有自己的依赖和自己的插件
 
-![1624451058231](img\springboot\1624451058231.png)
+![1624451058231](..\img\springboot\1624451058231.png)
 
 重点：都一样！
 
@@ -142,13 +142,13 @@ public class SpringBootSolrApplication {
 
 File-Settings-Compiler-Build Project automatically
 
-![1624451804299](img\springboot\1624451804299.png)
+![1624451804299](..\img\springboot\1624451804299.png)
 
 ctrl + shift + alt + / ,选择Registry,勾上 Compiler autoMake allow when app running
 
-![1624451849728](img\springboot\1624451849728.png)
+![1624451849728](..\img\springboot\1624451849728.png)
 
-![1624452265642](img\springboot\1624452265642.png)
+![1624452265642](..\img\springboot\1624452265642.png)
 
 > 思考和我们以前的项目有什么不同，直观的两点
 
@@ -235,11 +235,11 @@ public class AppConfig {
 
 ### 1、真的没有配置文件了吗？其实也有
 
-![1624452994705](E:\CPHC\桌面\springboot\img\springboot\1624452994705.png)
+![1624452994705](..\img\springboot\1624452994705.png)
 
 例如：怎么配一个端口呢？
 
-![1624453035061](E:\CPHC\桌面\springboot\img\springboot\1624453035061.png)
+![1624453035061](..\img\springboot\1624453035061.png)
 
 ### 2、猜一猜，估计是根据约定以编码的方式写了代码里边
 
@@ -1076,7 +1076,7 @@ public class ApplicationConfiguration implements WebMvcConfigurer {
 
 > jar包
 
- 因为是maven项目![1624457688276](img\springboot\1624457688276.png)
+ 因为是maven项目![1624457688276](..\img\springboot\1624457688276.png)
 
 标志打包为war
 
@@ -1160,7 +1160,7 @@ tomcat
 
 2、META-INF/services/javax.servlet.ServletContainerInitializer  找  spi 调用 onstart
 
-![1624458113611](img\springboot\1624458113611.png)
+![1624458113611](..\img\springboot\1624458113611.png)
 
 3、servletcontext  配置servlet  filter listener
 
@@ -2139,7 +2139,7 @@ public class Swagger3Config {
 }
 ```
 
-![1624462099486](img\springboot\1624462099486.png)
+![1624462099486](..\img\springboot\1624462099486.png)
  **（**4**）完善**controller
 
 ```
@@ -2178,7 +2178,7 @@ public class UserController {
 }
 ```
 
-![1624462335236](img\springboot\1624462335236.png)
+![1624462335236](..\img\springboot\1624462335236.png)
 
 #### （5）换皮肤
 
@@ -2667,7 +2667,7 @@ xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras- springsecurity3">
 
 认证流程
 
- ![1624463843374](img\springboot\1624463843374.png)
+ ![1624463843374](..\img\springboot\1624463843374.png)
 
 ```java
 /**
