@@ -18,13 +18,13 @@ sidebar-avatar: /img/about-BY-gentle.png      # use absolute URL, seeing it's us
 
 # SNS settings
 RSS: flas
-# weibo_username: aiLi0617
-# zhihu_username: AiLi
-# github_username: aili0617
-# facebook_username:  baiying.qiu.7
-# csdn_username: qq_45867488
-# jianshu_username: fedc3735306e
-# twitter_username:   qiubaiying
+  weibo_username: aiLi0617
+  zhihu_username: AiLi
+  github_username: aili0617
+  #facebook_username:  baiying.qiu.7
+  csdn_username: qq_45867488
+  jianshu_username: fedc3735306e
+  twitter_username:   qiubaiying
 
 
 
