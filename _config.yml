@@ -98,18 +98,18 @@ service-worker: true
 
 
 # Friends
-friends: [
-    {
-        title: "WY",
-        href: "https://weibo.com/6443018892/profile?rightmod=1&wvr=6&mod=personinfo&is_all=1"
-    },{
-        title: "简书·BY",
-        href: "https://www.jianshu.com/u/fedc3735306e"
-    },{
-        title: "知乎",
-        href: "https://www.zhihu.com/people/aili-83-55-59"
-    },{
-        title: "CSDN",
-        href: "https://blog.csdn.net/qq_45867488?spm=1000.2115.3001.5343"
-    }
-]
+#friends: [
+#    {
+#        title: "WY",
+#        href: "https://weibo.com/6443018892/profile?rightmod=1&wvr=6&mod=personinfo&is_all=1"
+#    },{
+#        title: "简书·BY",
+#        href: "https://www.jianshu.com/u/fedc3735306e"
+#    },{
+#        title: "知乎",
+#        href: "https://www.zhihu.com/people/aili-83-55-59"
+#    },{
+#        title: "CSDN",
+#        href: "https://blog.csdn.net/qq_45867488?spm=1000.2115.3001.5343"
+#    }
+#]
